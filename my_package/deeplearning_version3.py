@@ -81,7 +81,7 @@ def run():
                 metrics=['accuracy'])
 
     #model name
-    model_name = input("Enter a name for this model (e.g., tomato_disease_v1): ").strip()
+    model_name = input("set the name for this model : ").strip()
 
     # === CHECKPOINT SETUP ===
     checkpoint_dir = f"/content/drive/MyDrive/checkpoints/{model_name}"
