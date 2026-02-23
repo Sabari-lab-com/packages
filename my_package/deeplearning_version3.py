@@ -1,19 +1,6 @@
 
 def start_train():
-    from google.colab import files
-    import zipfile
-    import os
-
-    print("upload you dataset in zip file")
-    # Upload a zip file
-    uploaded = files.upload()
-
-    # Assume you uploaded "myfolder.zip"
-    zip_path = list(uploaded.keys())[0]
-
-    # Extract it
-    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall("/content/myfolder")
+   
 
     # Now you can access the folder
     data_dir = "/content/myfolder"
