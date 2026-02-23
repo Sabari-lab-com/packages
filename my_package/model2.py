@@ -1,4 +1,6 @@
-
+def getchoice():
+    choice_f = input("Enter choice (1-3): ").strip()
+    return choice_f
 def load_dataset():
     from google.colab import files
     import zipfile
@@ -155,9 +157,7 @@ def start_train_mn_model(epochs):
     print("2. Legacy Keras HDF5 (.h5)")
     print("3. TensorFlow Lite (.tflite)")
 
-     def getchoice():
-        choice_f = input("Enter choice (1-3): ").strip()
-        return choice_f
+
     choice = getchoice()
 
     ext_map = {
