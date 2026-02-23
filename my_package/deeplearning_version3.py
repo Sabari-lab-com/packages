@@ -142,10 +142,9 @@ def start_train():
     print("\nWhich format do you want to export?")
     print("1. TensorFlow Keras (new .keras)")
     print("2. Legacy Keras HDF5 (.h5)")
-    print("3. ONNX (.onnx)")
-    print("4. TensorFlow Lite (.tflite)")
+    print("3. TensorFlow Lite (.tflite)")
 
-    choice = input("Enter choice (1-4): ").strip()
+    choice = input("Enter choice (1-3): ").strip()
 
     ext_map = {
         "1": "keras",
