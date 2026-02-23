@@ -19,7 +19,7 @@ def load_dataset():
     path = "/content/myfolder"
     return path
 
-def start_train(epochs):
+def start_train_mn_model(epochs):
 
     data_dir = "/content/myfolder"
 
