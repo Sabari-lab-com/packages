@@ -155,7 +155,10 @@ def start_train_mn_model(epochs):
     print("2. Legacy Keras HDF5 (.h5)")
     print("3. TensorFlow Lite (.tflite)")
 
-    choice = input("Enter choice (1-3): ").strip()
+     def getchoice():
+        choice_f = input("Enter choice (1-3): ").strip()
+        return choice_f
+    choice = getchoice()
 
     ext_map = {
         "1": "keras",
