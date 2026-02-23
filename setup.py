@@ -1,10 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="my-package-name",
-    version="0.0.1",
+    name="Auto_train",
+    version="1.0.3",
     packages=find_packages(),
     install_requires=[],
-    author="Your Name",
-    description="Simple greeting package",
+    author="Sabari",
+    description="this package is build and designed by srec stundent for final year project",
+
 )
