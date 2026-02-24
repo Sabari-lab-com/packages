@@ -56,6 +56,8 @@ def start_train_mn(epochs):
     )
 
     class_names = train_ds.class_names
+    print("Detected classes:", class_names)
+
 
     # Normalize and improve pipeline performance
     preprocess_input = tf.keras.applications.mobilenet_v2.preprocess_input
