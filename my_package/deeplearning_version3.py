@@ -39,6 +39,8 @@ def start_train():
     )
 
     class_names = train_ds.class_names
+    print("Detected classes:", class_names)
+
 
     # Normalize and improve pipeline performance
     normalization_layer = layers.Rescaling(1./255)
