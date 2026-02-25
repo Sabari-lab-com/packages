@@ -3,9 +3,6 @@ def load_dataset():
     import zipfile
     import os
 
-    # Mount Google Drive
-    drive.mount('/content/drive')
-
     print("Upload your dataset as a zip file")
     uploaded = files.upload()
 
@@ -22,3 +19,4 @@ def load_dataset():
 
     print("Check your drive folder name:image_dataset \n copy the path your Dataset")
     return target_folder
+
