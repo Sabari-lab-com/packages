@@ -1,4 +1,4 @@
-def start_train_efficient_net(epochs):
+def start_train_efficient_net(epochs,path):
 
     import os, glob, re
     import tensorflow as tf
@@ -10,10 +10,9 @@ def start_train_efficient_net(epochs):
     import seaborn as sns
     from google.colab import drive
 
-    drive.mount('/content/drive', force_remount=False)
 
     # ================= SETTINGS =================
-    data_dir = "/content/myfolder"
+    data_dir = path
     img_height, img_width = 224, 224
     batch_size = 32
     seed = 40
