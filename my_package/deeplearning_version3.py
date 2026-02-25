@@ -1,9 +1,9 @@
 
-def start_train():
+def start_train(path):
    
 
     # Now you can access the folder
-    data_dir = "/content/myfolder"
+    data_dir = path
 
     # Fixed, resume-capable training script (Colab-ready)
     import os, glob, re
@@ -14,10 +14,10 @@ def start_train():
 
     # === SETTINGS ===
     #data_dir = "/content/drive/MyDrive/Datasets/archive/Tomato Leaf Disease"     # your dataset folder (contains class subfolders)
-    img_height, img_width = 128, 128
+    img_height, img_width = 224, 224
     batch_size = 32
     seed = 40
-    total_epochs = 20      # total number of epochs you want to run (set > already-run epochs to resume)
+    total_epochs = 30      # total number of epochs you want to run (set > already-run epochs to resume)
 
     # === LOAD DATA (train/validation split inside same folder) ===
     train_ds = tf.keras.preprocessing.image_dataset_from_directory(
