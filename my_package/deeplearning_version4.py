@@ -157,3 +157,4 @@ def start_train(path):
     plt.show()
     final_path = os.path.join(checkpoint_dir, f"{model_name}_epoch_{total_epochs:02d}.keras")
     return (checkpoint_dir,model_name,total_epochs,model)
+
