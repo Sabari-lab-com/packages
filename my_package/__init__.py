@@ -1,4 +1,4 @@
-from .deeplearning_version3.1 import start_train
+from .deeplearning_version4 import start_train
 from .moblie_net import start_train_mn
 from .efficient_net import start_train_efficient_net
 from .res_net import start_resnet
