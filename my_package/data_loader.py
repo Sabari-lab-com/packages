@@ -17,6 +17,6 @@ def load_dataset():
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(target_folder)
 
-    print("Check your drive folder name:image_dataset \n copy the path your Dataset")
+    print("Check your drive folder name:image_dataset \n copy the path of your Dataset")
     return target_folder
 
