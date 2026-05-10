@@ -96,6 +96,8 @@ def start_resnet(epochs,path):
         layers.Dense(256, activation='relu'),
         layers.BatchNormalization(),
         layers.Dropout(0.5),
+        layers.Dense(128, activation='relu'),
+        layers.Dropout(0.3),
         layers.Dense(len(class_names), activation='softmax', dtype='float32')  # output in float32 for stability
     ])
 
