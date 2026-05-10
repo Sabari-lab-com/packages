@@ -3,9 +3,7 @@ def start_resnet(epochs,path):
     data_dir = path
 
     # Fixed, resume-capable training script (Colab-ready)
-    pip install tensorflow-probability
-    import tensorflow_probability as tfp
-    # above section is added
+    
     import os, glob, re
     import tensorflow as tf
     from tensorflow.keras import layers, models
