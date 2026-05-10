@@ -55,7 +55,7 @@ def start_resnet(epochs,path):
         import tensorflow as tf
         def _mixup(batch_x, batch_y):
             batch_size = tf.shape(batch_x)[0]
-            l = tfp.distributions.Beta(alpha, alpha).sample(batch_size)
+            l = tf.compat.v1.distributions.Beta(alpha, alpha).sample([batch_size])
             x_l = tf.reshape(l, (batch_size, 1, 1, 1))
             y_l = tf.reshape(l, (batch_size, 1))
             index = tf.random.shuffle(tf.range(batch_size))
