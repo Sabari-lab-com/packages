@@ -3,11 +3,15 @@ def start_resnet(epochs,path):
     data_dir = path
 
     # Fixed, resume-capable training script (Colab-ready)
+    pip install tensorflow-probability
+    import tensorflow_probability as tfp
+    # above section is added
     import os, glob, re
     import tensorflow as tf
     from tensorflow.keras import layers, models
     from tensorflow.keras.callbacks import ModelCheckpoint
     import matplotlib.pyplot as plt
+    
 
     # === SETTINGS ===
     #data_dir = "/content/drive/MyDrive/Datasets/archive/Tomato Leaf Disease"     # your dataset folder (contains class subfolders)
@@ -53,7 +57,7 @@ def start_resnet(epochs,path):
         import tensorflow as tf
         def _mixup(batch_x, batch_y):
             batch_size = tf.shape(batch_x)[0]
-            l = tf.compat.v1.distributions.Beta(alpha, alpha).sample([batch_size])
+            l = tfp.distributions.Beta(alpha, alpha).sample(batch_size)
             x_l = tf.reshape(l, (batch_size, 1, 1, 1))
             y_l = tf.reshape(l, (batch_size, 1))
             index = tf.random.shuffle(tf.range(batch_size))
