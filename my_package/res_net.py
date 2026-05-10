@@ -66,7 +66,12 @@ def start_resnet(epochs,path):
     preprocess_input = tf.keras.applications.resnet.preprocess_input
     autotune = tf.data.AUTOTUNE
     train_ds = train_ds.map(lambda x, y: (data_augmentation(preprocess_input(x)), y)).cache().shuffle(1000).prefetch(autotune)
-    val_ds = val_ds.map(lambda x, y: (preprocess_input(x), y)).cache().prefetch(autotune)
+    val_ds = val_ds.map(
+    lambda x, y: (
+        preprocess_input(x),
+        tf.one_hot(y, depth=len(class_names))
+    )
+).cache().prefetch(autotune)
 
     # Apply Mixup augmentation to training set
     train_ds = mixup(train_ds)
